@@ -1,0 +1,42 @@
+{% load static %}
+<html lang="en-us" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'styles/app.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="circle circle__one"></div>
+        <div class="circle circle__two"></div>
+
+        <form method="post" class="form" autocomplete="off">
+            {% csrf_token %}
+
+            <h2 class="form__title">Login Here</h2>
+
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-error" style="background: #ffebee; color: #c62828; padding: 10px; border-radius: 8px; margin-bottom: 15px; text-align: center;">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+            <div class="form__wrapper form__wrapper-username">
+                <label class="form__lbl" for="username">Username</label>
+                <input type="text" class="form__input" name="username" id="username" placeholder="Email or Phone" autofocus required
+                       value="{{ form.username.value|default:'' }}">
+            </div>
+
+            <div class="form__wrapper form__wrapper-password">
+                <label class="form__lbl" for="password">Password</label>
+                <input type="password" class="form__input" name="password" id="password" minlength="4" maxlength="24" placeholder="Password" required>
+            </div>
+
+            <input type="submit" class="form__submit-btn" value="Log in">
+        </form>
+    </div>
+</body>
+</html>

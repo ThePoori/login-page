@@ -1,0 +1,19 @@
+{% load static %}
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'styles/app.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="circle circle__one"></div>
+        <div class="circle circle__two"></div>
+        <div class="form" style="text-align: center;">
+            <h2>خوش آمدی {{ username }}! 🎉</h2>
+            <p>با موفقیت وارد شدی.</p>
+            <img src="{% static 'images/maymon.png' %}" alt="میمون">
+            <a href="{% url 'logout' %}" class="form__submit-btn" style="text-decoration: none; display: inline-block;">خروج</a>
+        </div>
+    </div>
+</body>
+</html>

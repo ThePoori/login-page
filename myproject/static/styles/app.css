@@ -1,0 +1,140 @@
+@font-face{
+    font-family: "Rooyin-Bold";
+    src: local("Rooyin"), local("Rooyin-Bold")
+    url("../fonts/ttf/RooyinFreeFaNum-Bold.ttf") format("truetype"),
+    url("../fonts/woff2/RooyinFree-Bold.woff2") format("woff2");
+}
+html{
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+    margin: 0;
+}
+body{
+    font-family: "Rooyin-Bold";
+    background-color:  #1b1a17;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+input{
+    font-family: inherit;
+    border: none;
+    outline: none;
+}
+.wrapper{
+    width: 400px;
+    position: relative;
+}
+.circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    transform: rotate(45deg);
+    position: absolute;
+    z-index: -13;
+}
+.circle__one{
+    background: linear-gradient(90deg, #f0a500, #c29d65);
+    top: -100px;
+    left: -100px;
+}
+.circle__two{
+    background: linear-gradient(270deg, #e45826, #d67e5d);
+    bottom: -100px;
+    right: -100px;
+}
+.form{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: rgba(255,255,255,0.13);
+    border: 1px solid rgba(255, 255, 255, 0.50);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    padding: 50px 35px 35px 35px;
+}
+.form__title{
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+.form__wrapper-username{
+    margin-bottom: 30px;
+}
+.form__lbl{
+    font-size: inherit;
+}
+.form__input{
+    font-size: 14px;
+    display: block;
+    height: 50px;
+    background-color: rgba(255,255,255,0.07);
+    color: #fff;
+    padding: 0 10px;
+    width: 100%;
+    margin-top: 6px;
+    border-radius: 5px;
+}
+.form__submit-btn{
+    font-size: 20px;
+    margin: 50px 0px 0px;
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 5px;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.50);
+    transition: background-color 250ms ease-in;
+}
+.form__submit-btn:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.form__submit-btn:active{
+    transform: scale(1.007);
+}
+/*          --------------------------------------------------------------------------             */
+/* اگر عکس داخل یک المنت img است */
+img {
+    width: 100px;           /* عرض دلخواه - میتونی تغییر بدی */
+    height: 100px;          /* ارتفاع دلخواه - میتونی تغییر بدی */
+    border-radius: 10%;     /* برای دایره‌ای شدن (50% = دایره کامل) */
+    object-fit: cover;      /* عکس رو بدون اعوجاج توی کادر قرار میده */
+}
+
+/* یا اگر میخوای فقط گوشه‌ها گرد بشن (نه دایره کامل) */
+img.rounded {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;    /* گردی گوشه‌ها - میتونی عدد بدی */
+    object-fit: cover;
+}
+
+/* برای عکس کوچیک با حاشیه و سایه */
+img.small-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    border: 2px solid #fff;  /* حاشیه سفید */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* سایه */
+    object-fit: cover;
+}
+
+/* عکس دایره‌ای با افکت hover */
+img.circle-hover {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;  /* انیمیشن نرم */
+}
+
+img.circle-hover:hover {
+    transform: scale(1.1);  /* بزرگتر شدن هنگام هاور */
+}
+
